@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <img src="" id="hinh-anh">
+
+    <p id="van-ban">  </p>
+
+    <img 
+        id="hinh-pikachu"
+        style="top: 10px;left: 20px;position: absolute;" 
+        src="https://st.gamevui.com/images/image/2019/03/20/pikachu-200.jpg" 
+    >
+
+    <script>
+        document.getElementById('hinh-anh').src = 'https://9mobi.vn/cf/images/2015/03/nkk/hinh-dep-1.jpg';
+        
+        document.getElementById('van-ban').innerHTML = 'Xin chao';
+
+        var top = document.getElementById('hinh-pikachu').style.top;
+        var left = document.getElementById('hinh-pikachu').style.left;
+        var position = document.getElementById('hinh-pikachu').style.position;
+
+        console.log(top);
+        console.log(left);
+        console.log(position);
+
+
+    </script>
+
+</body>
+</html>
