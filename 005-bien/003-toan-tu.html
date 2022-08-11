@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            - toan hoc
+                + - * / % ++ --
+        */
+        var a = 6;
+        var b = 2;
+        console.log( a + b );//8
+        // console.log( a++ );
+        // console.log( b-- );
+
+        /*
+            - toan tu gan:
+                = , +=, -=, *=, /=, %= 
+        */
+       var x = 10;
+       var y = 5;
+
+       y += x; // y = y + x
+       y -= x; // y = y - x
+       y *= x; // y = y * x
+       y /= x; // y = y / x
+       y %= x; // y = y % x
+
+       console.log( y += x )
+
+       /*
+        toan tu cong chuoi
+       */
+       var ho   = 'Nguyen Van ';
+       var ten  = 'A';
+       var ho_va_ten = ho + ten;//Nguyen Van A
+       console.log( ho_va_ten );
+
+       var so_1 = '1';
+       var so_2 = '2';
+       var ket_qua = so_1 + so_2;//12
+       console.log( ket_qua );
+
+       var so_a = 6;
+       var so_b = '6';
+       var ket_qua_2 = so_a + so_b;//56
+       console.log(ket_qua_2);
+
+       /*
+        toan tu so sanh
+        ==  : so sanh bang ve gia tri
+        === : bang gia tri dong thoi cung kieu du lieu
+        !=  : ko bang nhau ve gia tri
+        !== : ko bang nhau ve gia tri va ko cung du lieu
+        >   : so lon ho ve gia tri 
+        <
+        <=
+        >=
+       */
+
+       var so_1 = 6;
+       var so_2 = '6';
+       var so_3 = 7;
+
+       //so_1 == so_2 && so_3 > so_1
+       //so_1 == so_2 && so_3 < so_1
+       //so_1 == so_2 || so_3 > so_1
+       //so_1 == so_2 || so_3 < so_1
+
+       console.log( so_1 == so_2 );//true
+       console.log( so_1 === so_2 );//false
+
+       console.log( so_1 == so_2 && so_3 > so_1 )
+       //   true    &&    true
+       //   true
+
+       console.log( so_1 != so_2 && so_3 < so_1 )
+       //  false    &&   false
+       //  false
+       
+       console.log( so_1 == so_2 && so_3 < so_1 )
+       //   true    &&   false
+       //   false
+
+       so_1 == so_2 || so_3 < so_1
+       //true              false
+       //true 
+
+       !so_1 == so_2 //true => false
+
+       /*
+       toan tu logic
+       &&: 
+       ||:
+       !: 
+       */
+
+
+       
+       
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
