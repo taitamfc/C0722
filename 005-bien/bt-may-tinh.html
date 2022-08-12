@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    So 1 <input type="text" name="" id="so_1"> <br>
+    So 2 <input type="text" name="" id="so_2"> <br>
+
+    <p id="ket_qua"></p>
+
+    <input type="button" value="+" onclick=" xu_ly_cong() ">
+    <input type="button" value="-" onclick=" xu_ly_tru() ">
+    <input type="button" value="*" onclick=" xu_ly_nhan() ">
+    <input type="button" value="/" onclick=" xu_ly_chia() ">
+
+    <script>
+        // khai bao cac khoi xy ly
+        function xu_ly_cong(){
+            var so_1 = document.getElementById('so_1').value;//'2'
+            var so_2 = document.getElementById('so_2').value;//'3'
+
+            // chuyen doi kieu du lieu
+            so_1 = parseInt(so_1);//'2' => 2
+            so_2 = parseInt(so_2);//'3' => 3
+
+            // tinh toan
+            var ket_qua = so_1 + so_2;//5
+            
+            // xuat
+            document.getElementById('ket_qua').innerHTML = '<strong>Ket qua la:</strong> ' + ket_qua;
+
+        }
+        function xu_ly_tru(){
+            // lay input
+
+            //chuyen doi kieu du lieu
+
+            //tinh toan
+
+            //xuat
+        }
+        function xu_ly_nhan(){}
+        function xu_ly_chia(){}
+    </script>
+
+</body>
+</html>
