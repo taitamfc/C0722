@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tusach  = [
+            ['Van','Su','Dia','Anh'], //0
+        //     0     1    2     3
+            ['Toan','Ly','Hoa','Sinh']  //1
+        //     0      1    2    3
+        ];
+
+        console.log( tusach.length );//2
+
+        for( var i = 0; i < tusach.length; i++  ){
+            /*
+            i: 0 => tusach[0]: ['Van','Su','Dia','Anh']
+            i: 1 => tusach[1]: ['Toan','Ly','Hoa','Sinh']
+            */
+            for( var k = 0; k < tusach[i].length; k ++ ){
+                console.log( tusach[i][k] )
+            }
+        }
+
+        if(true){
+            //truy xuat SU
+            console.log( tusach[0][0] ) 
+            console.log( tusach[0][1] ) 
+            console.log( tusach[0][2] ) 
+            console.log( tusach[0][3] ) 
+            //truy xuat Hoa
+            console.log( tusach[1][2] )
+
+            //thay doi Van thanh Van Hoc
+            tusach[0][0] = 'Van Hoc';
+
+            //thay doi Ly -> Vat Ly
+            tusach[1][1] = 'Vat Ly';
+
+            //them Sinh chi so
+            tusach[0][3] = 'Sinh';
+
+            //them Anh: push
+            tusach[0].push('Anh');
+        }
+        
+        //duyet mang
+        /*
+            i: 0
+               k: 0 
+               k: 1 
+               k: 2 
+               k: 3 
+            i: 1
+                k: 0 
+                k: 1 
+                k: 2 
+                k: 3
+        */
+
+
+
+    </script>
+</body>
+</html>

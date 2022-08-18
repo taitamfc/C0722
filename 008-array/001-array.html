@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //khai bao mang
+        var books   = ['Van','Su','Dia'];
+        //              0      1    2
+        var books_2 = new Array('Van','Su','Dia');
+
+        //truy xuat phan tu: Van
+        console.log( books[0]  );
+
+        //truy xuat phan tu: Su
+        console.log( books[1]  );
+
+        //truy xuat phan tu: Dia
+        console.log( books[2] );
+
+        //xem do dai cua mang
+        console.log( books.length );
+
+        //dung vong lap
+        for( var i = 0; i < books.length;i++ ){
+            console.log( books[i] );
+        }
+
+        //thay the phan tu bang gia tri moi
+            // thay Van thanh Van Hoc
+            books[0] = 'Van Hoc';
+            // thay SU thanh Lich Su
+            books[1] = 'Lich Su';
+            //thay Dia thanh Dia Ly
+            books[2] = 'Dia Ly';
+
+        //them phan tu vao mang push
+            books.push('Toan')
+
+        
+            
+        
+        /*
+            var books   = ['Van','Su','Dia','Toan','Vat Ly'];
+            //              0      1    2      3      4
+        */
+        books[4] = 'Vat Ly';
+        //them phan tu vao mang length
+        books[books.length] = 'Hoa';
+
+        console.log( books.length );//5
+
+
+        console.log(books);
+
+        /*
+        1,2,Fizz,4,Buzz,6,7,8,Fizz...
+        */
+        //dung vong lap for, tao mang tu 0 -> 10
+
+        console.log( books.join(',') );//'Van,Su,Dia'
+        
+
+    </script>
+</body>
+</html>

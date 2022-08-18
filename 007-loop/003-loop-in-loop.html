@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var total = 0;
+        for( var i = 2; i <= 9; i++ ){//8
+            /*
+            i: 2
+                k: 1 
+                k: 2 
+                ...
+                k: 10 
+            i: 3
+                k: 1 
+                k: 2 
+                ...
+                k: 10 
+            ...
+            i: 9
+                k: 1 
+                k: 2 
+                ...
+                k: 10 
+            */
+            // console.log('i :' + i);
+            for( var k = 1; k <= 10; k++ ){//10
+                console.log(' k :' + k);
+                for( var z = 1; z <= 5; z++ ){//5
+                    console.log(' z :' + z);
+                    total += 1
+                }
+            }
+            // console.log('================')
+            
+        }
+
+        console.log('total : ' + total)
+
+    </script>
+</body>
+</html>
