@@ -1,0 +1,45 @@
+<script>
+    let book_1 = ['Van','Su','Dia'];
+    let book_2 = ['Toan','Ly','Hoa'];
+
+    let tu_sach = [
+        ['Van','Su','Dia'],//0: book_1
+        // 0     1     2  
+        ['Toan','Ly','Hoa'] //1: book_2
+        // 0     1     2
+    ];//2
+
+    
+
+    //truy xuat
+    console.log( tu_sach[0][1] );//Su
+    console.log( tu_sach[1][1] );//Dia
+
+    //them vao book_1 : 'Sinh'
+    tu_sach[0].push('Sinh');
+    // tu_sach[0][3] = 'Sinh';
+
+    //do dai
+    console.log( tu_sach[0].length );//3
+
+    //cap nhat
+    tu_sach[0][1] = 'Lich Su';
+
+    //duyet
+    for( let i = 0; i < tu_sach.length; i++ ){
+        /*
+        i: 0  => tusach[0].length = 3 : ['Van','Su','Dia']
+           k: 0 => tusach[0][0]  
+           k: 1  => tusach[0][1]
+           k: 2  => tusach[0][2]
+        i: 1  => tusach[1].length = 3 : ['Toan','Ly','Hoa']
+           k: 0 => tusach[1][0]
+           k: 1 => tusach[1][1]
+           k: 2 => tusach[1][2]
+        */
+        for( let k = 0; k < tu_sach[i].length; k++ ){
+            console.log( tu_sach[i][k] );
+        }
+    }
+
+</script>
