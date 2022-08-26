@@ -1,0 +1,146 @@
+<script>
+    /*
+    ===================DOI TUONG===============
+    - cu phap doi tuong
+
+    c1: tao mot doi tuong gom thong tin cua ban than
+    c2: tu doi tuong do, tao them 2 phuong thuc work va relax
+
+    - truy cap thuoc tinh
+    - truy cap phuong thuc
+
+    ===================LOP===============
+
+    - cu phap tao lop
+    - tao thuoc tinh
+    - tao phuong thuc
+
+    - khoi tao doi tuong
+    - truy cap thuoc tinh
+    - truy cap phuong thuc
+    */
+
+    //- cu phap doi tuong
+    /*
+    let doi_tuong = {
+        thuoc_tinh_1 : gia_tri_1,
+        thuoc_tinh_2 : gia_tri_2,
+        thuoc_tinh_3 : gia_tri_3,
+        phuong_thuc_1: function(){
+
+        },
+        phuong_thuc_2: function(){
+
+        }
+    }
+
+    // truy cap thuoc tinh
+    console.log( doi_tuong.thuoc_tinh_1 );
+
+    // truy cap phuong thuc khong co su tra ve
+    doi_tuong.phuong_thuc_1()
+
+     // truy cap phuong thuc co su tra ve
+    console.log( doi_tuong.phuong_thuc_2() );
+
+    //cu phap khai bao lop
+    let Class_Name = function(){
+        // khai bao thuoc tinh
+        this.thuoc_tinh_1 = gia_tri_1;
+        this.thuoc_tinh_2 = gia_tri_2;
+
+        // khai bao phuong thuc
+        this.phuong_thuc_1 = function(){
+
+        }
+
+        this.phuong_thuc_2 = function(){
+
+        }
+    }
+    //Tao lop co ten la Human, bao gom thuoc tinh va phuong thuc tren bang
+
+    // khoi tao doi tuong
+    let doi_tuong_1 = new Class_Name();
+
+    */
+    let ngoc = {
+        name : 'Ngoc',
+        age : 22,
+        gender : 'male',
+        work: function(){
+            console.log('work')
+        },
+        relax: function(){
+            return 'relax';
+        }
+    }
+
+
+
+    let tam = {
+        name : 'Tam',
+        age : 26,
+        
+        work: function(){
+            console.log('work')
+        },
+        relax: function(){
+            return 'relax';
+        }
+    }
+
+    console.log(tam);
+
+    let Human = function( ts_name, ts_age ){
+        // khai bao thuoc tinh
+        this.name = ts_name;
+        this.age = ts_age;
+
+        // khai bao phuong thuc
+        this.work = function(){
+
+        }
+        this.relax = function(){
+
+        }
+        // setter: thiet lap gia tri thuoc tinh
+        this.setName = function(ts_name){
+            // ts_name: Trieu Vy
+            this.name = ts_name;
+        }
+        this.setAge = function( ts_age ){
+            this.age = ts_age;
+        }
+        // getter: tra ve gia tri cac thuoc tinh
+        this.getName = function(){
+            return this.name;
+        }
+        this.getAge = function(){
+            return this.age;
+        }
+    }
+    // khoi tao doi tuong
+    let vy = new Human('Vy',19);
+    vy.setName('Trieu Vy');
+    vy.setAge(22);
+    console.log( this.getName() );
+    console.log( this.getAge() );
+
+    // truy cap thuoc tinh
+    console.log( vy )
+
+    // let nhan = new Human('Nhan',19);
+    // let thang = new Human('Thang',19);
+    // console.log(vy);
+    // console.log(nhan);
+    // console.log(thang);
+
+
+
+
+
+    
+
+
+</script>

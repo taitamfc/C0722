@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        /*
+        let TEN_LOP = function(){
+            // khai bao thuoc tinh
+            this.thuoc_tinh_1 = gia_tri_1
+            this.thuoc_tinh_2 = gia_tri_2
+
+            // khai bao phuong thuc
+            this.phuong_thuc_1 = function(){
+
+            }
+
+            this.phuong_thuc_2 = function(){
+                
+            }
+        }
+        */
+
+        let HCN = function( ts_dai, ts_rong ){
+            // khai bao thuoc tinh
+            this.chieu_dai = ts_dai
+            this.chieu_rong = ts_rong
+
+            // khai bao phuong thuc
+            this.tinh_chu_vi = function(){
+                return ( this.chieu_dai + this.chieu_rong ) * 2;
+            }
+
+            this.tinh_dien_tich = function(){
+                return this.chieu_dai * this.chieu_rong
+            }
+
+            this.ve_hinh = function(){
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.fillRect(100, 10, this.chieu_rong, this.chieu_dai)
+            }
+        }
+
+        let hcn_1 = new HCN( 100, 200 );
+        console.log( 'Chu vi la: ' + hcn_1.tinh_chu_vi() );
+        console.log( 'Dien tich la: ' + hcn_1.tinh_dien_tich() );
+
+        // truy cap phuong thuc ve hinh
+        hcn_1.ve_hinh();
+
+    </script>
+</body>
+</html>

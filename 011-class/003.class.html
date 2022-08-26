@@ -1,0 +1,60 @@
+<script>
+    /*
+        let TEN_LOP = function(){
+            // khai bao thuoc tinh
+            this.thuoc_tinh_1 = gia_tri_1
+            this.thuoc_tinh_2 = gia_tri_2
+
+            // khai bao phuong thuc
+            this.phuong_thuc_1 = function(){
+
+            }
+
+            this.phuong_thuc_2 = function(){
+                
+            }
+        }
+
+        class TEN_LOP {
+            // phuong thuc khoi tao
+            constructor(){
+                // khai bao thuoc tinh
+                this.thuoc_tinh_1 = gia_tri_1
+                this.thuoc_tinh_2 = gia_tri_2
+            }
+
+            // khai bao phuong thuc
+            phuong_thuc_1(){
+
+            }
+            phuong_thuc_2(){
+
+            }
+        }
+    */
+    class HCN {
+        // khai bao thuoc tinh
+        constructor( ts_dai, ts_rong ){
+            this.chieu_dai = ts_dai;
+            this.chieu_rong = ts_rong;
+        }
+        // khai bao phuong thuc
+        tinh_chu_vi(){
+            return ( this.chieu_dai + this.chieu_rong ) * 2;
+        }
+        tinh_dien_tich(){
+            return this.chieu_dai * this.chieu_rong
+        }
+        ve_hinh(){
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillRect(100, 10, this.chieu_rong, this.chieu_dai)
+        }
+    }
+    let hcn_1 = new HCN( 100, 200 );
+    console.log( 'Chu vi la: ' + hcn_1.tinh_chu_vi() );
+    console.log( 'Dien tich la: ' + hcn_1.tinh_dien_tich() );
+
+    // truy cap phuong thuc ve hinh
+    hcn_1.ve_hinh();
+</script>

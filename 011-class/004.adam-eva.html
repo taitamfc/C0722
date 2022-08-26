@@ -1,0 +1,64 @@
+<script>
+    class Human{
+        constructor(ts_name, ts_gender){
+            // thuoc tinh
+            this.name = ts_name;
+            this.gender = ts_gender;
+            this.weight = 100;
+        }
+
+        
+        // phuong thuc
+        an_tao( doi_tuong_TAO ){
+            doi_tuong_TAO.giam_khoi_luong();
+            // console.log(doi_tuong_TAO);
+        }
+
+        say( noi_dung ){
+            console.log( noi_dung );
+        }
+    }
+
+    class Apple {
+        // phuong thuc khoi tao
+        constructor(){
+            // khai bao thuoc tinh
+            this.khoi_luong = 10;
+        }
+        // khai bao phuong thuc
+        giam_khoi_luong(){
+            this.khoi_luong--;
+        }
+        //kiem tra tao con khong
+        kiem_tra_rong(){
+            if( this.khoi_luong == 0 ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        //tra ve khoi luong
+        lay_khoi_luong(){
+            return this.khoi_luong;
+        }
+    }
+
+    // khoi tao doi tuong tao
+    let qua_tao = new Apple();
+
+    // khoi tao Adam
+    let Adam = new Human('Adam','male');
+    // khoi tao Eva
+    let Eva = new Human('Eva','female');
+
+    while ( !qua_tao.kiem_tra_rong() ) {
+        Adam.an_tao( qua_tao );
+        Adam.say('Em an di');
+
+        Eva.an_tao( qua_tao );
+        Eva.say('Anh an di');
+    }
+
+    console.log('Het tao');
+
+</script>
