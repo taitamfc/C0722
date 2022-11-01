@@ -14,13 +14,8 @@
 </head>
 
 <body class="sb-nav-fixed">
-
-
-    @include('includes.header');
-
-
+    @include('includes.header')
     <div id="layoutSidenav">
-
         @include('includes.sidebar');
         <div id="layoutSidenav_content">
             <main>
