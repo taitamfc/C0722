@@ -5,6 +5,9 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\BookController;
+use App\Models\Category;
+use App\Models\Book;
+use App\Models\Order;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +38,28 @@ Route::group([
 
 Route::resource('customers',CustomerController::class);
 Route::resource('books',BookController::class);
+
+Route::get('hasMany',function(){
+   $category = Category::find(1);//Van Học
+   dd( $category->books->toArray() );
+});
+
+Route::get('belongsTo',function(){
+   $book = Book::find(1);
+   dd( $book->category->toArray() );
+});
+
+Route::get('manyToMany',function(){
+   $book = Book::find(1);
+   dd( $book->orders->toArray() );
+});
+
+Route::get('manyToMany2',function(){
+   $order = Order::find(1);
+   dd( $order->books->toArray() );
+});
+
+Route::get('hasOne',function(){
+   $category = Category::find(1);//Van Học
+   dd( $category->book->toArray() );
+});
