@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-
+use App\Http\Requests\StoreCustomerRequest;
 class CustomerController extends Controller
 {
     public function index()
@@ -19,21 +19,23 @@ class CustomerController extends Controller
         return view('customers.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreCustomerRequest $request)
     {   
-        $validated = $request->validate([
-            'name' => 'required|unique:customer|max:6',
-            'email' => 'required',
-            'dob' => 'required'
-        ],
-        [
-            'name.required'=>'truong bat buoc',
-            'name.unique'=>'khong duong trung lap du lieu',
-            'name.max'=>'truong bat buoc be hon :max',
-            'email.required'=>'truong bat buoc',
-            'dob.required'=>'truong bat buoc'
-        ]
-    );
+        // $validated = $request->validate([
+        //     'name' => 'required|unique:customer|max:6',
+        //     'email' => 'required',
+        //     'dob' => 'required'
+        // ],
+        //     [
+        //         'name.required'=>'truong bat buoc',
+        //         'name.unique'=>'khong duong trung lap du lieu',
+        //         'name.max'=>'truong bat buoc be hon :max',
+        //         'email.required'=>'truong bat buoc',
+        //         'dob.required'=>'truong bat buoc'
+        //     ]
+        // );
+
+
 
         $customer = new Customer();
         $customer->name = $request->input('name');
