@@ -6,6 +6,7 @@ use App\Models\Customer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\StoreCustomerRequest;
+use Illuminate\Support\Facades\Validator;
 class CustomerController extends Controller
 {
     public function index()
@@ -19,8 +20,11 @@ class CustomerController extends Controller
         return view('customers.create');
     }
 
-    public function store(StoreCustomerRequest $request)
+    // Cach 2
+    // public function store(StoreCustomerRequest $request)
+    public function store(Request $request)
     {   
+        // Cach 1
         // $validated = $request->validate([
         //     'name' => 'required|unique:customer|max:6',
         //     'email' => 'required',
@@ -34,6 +38,27 @@ class CustomerController extends Controller
         //         'dob.required'=>'truong bat buoc'
         //     ]
         // );
+
+        // Cach 3
+        $validator = Validator::make($request->all(), [
+                'name' => 'required|unique:customer|max:6',
+                'email' => 'required',
+                'dob' => 'required'
+            ],
+            [
+                'name.required'=>'truong bat buoc',
+                'name.unique'=>'khong duong trung lap du lieu',
+                'name.max'=>'truong bat buoc be hon :max',
+                'email.required'=>'truong bat buoc',
+                'dob.required'=>'truong bat buoc'
+            ]
+        );
+        
+        if ($validator->fails()) {
+            return redirect('customers/create')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
 
 
 
