@@ -16,6 +16,7 @@ export class ProductsComponent {
   ngOnInit(){
     // Goi phuong thuc all cua servcie
     let items = this._ProductService.all();
+    this.products = items;
     console.log(items);
     
     // Goi phuong thuc find cua servcie

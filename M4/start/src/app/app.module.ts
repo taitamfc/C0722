@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule} from '@angular/common';
 
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FontSizeEditorComponent } from './font-size-editor/font-size-editor.component';
@@ -23,7 +24,7 @@ import { GameNumbersComponent } from './game-numbers/game-numbers.component';
 import { UTemplateDrivenComponent } from './u-template-driven/u-template-driven.component';
 import { VDataDrivenComponent } from './v-data-driven/v-data-driven.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProductsComponent } from './products/products.component';
+import { ProductsComponent } from './tutorial-router/products/products.component';
 import { ProductComponent } from './tutorial-router/product/product.component';
 import { ProductEditComponent } from './tutorial-router/product-edit/product-edit.component';
 import { ProductAddComponent } from './tutorial-router/product-add/product-add.component';
@@ -56,11 +57,11 @@ import { ProductDeleteComponent } from './tutorial-router/product-delete/product
     ProductDeleteComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

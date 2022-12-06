@@ -11,9 +11,10 @@ export class ProductsComponent {
   constructor(private _ProductService:ProductService){
 
   }
-  ngOnInit(){
+  ngOnInit(): void{
     // goi phuong thuc all
-    this.products = this._ProductService.all();
+    let items = this._ProductService.all();
+    this.products = items;
     console.log(this.products);
     
   }
