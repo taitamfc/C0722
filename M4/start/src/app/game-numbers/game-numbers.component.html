@@ -1,0 +1,10 @@
+<p>game-numbers works!</p>
+<h1>Point: {{ point }}</h1>
+<div class="row">
+    <div class="col" *ngFor="let number of numbers; let i = index">
+        <button type="button" class="btn btn-block btn-info mb-1"
+        (click)="playGame(number)"
+        >{{ number }}</button>
+    </div>
+    
+</div>

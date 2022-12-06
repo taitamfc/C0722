@@ -1,0 +1,12 @@
+<p [attr.id]="actionName">actionName</p>
+
+<button [class]="actionName" [attr.aria-label]="actionName" >{{actionName}}</button>
+
+<div [class.sale]="onSale">
+    {{onSale}}
+</div>
+<div [class]="clasEx" >clasEx</div>
+
+<nav [style.background-color]="exColor"></nav>
+
+<button class="btn btn-default" [class.btn-danger]="isDanger"> Button </button>

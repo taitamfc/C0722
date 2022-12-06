@@ -1,0 +1,11 @@
+<p>g-ng-if works!</p>
+<div *ngIf="the_number > 0">
+    <h1>the number is: {{the_number}}</h1>
+</div>
+<div *ngIf="isShow">
+    <h1>hiển thị</h1>
+</div>
+<div *ngIf="isShow; else noTime">
+    Time: {{isShow}}
+  </div>
+  <ng-template #noTime> No time. </ng-template>
