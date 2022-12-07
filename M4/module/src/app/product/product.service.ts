@@ -5,6 +5,9 @@ import { Product } from "./product";
   providedIn: 'root'
 })
 export class ProductService {
+  store(productData: Product) {
+    throw new Error('Method not implemented.');
+  }
 
   products: Product[] = [];
   constructor() {
