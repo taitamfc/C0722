@@ -17,9 +17,14 @@ export class ProductAddComponent {
     let productData:Product = {
       name: value.name,
       price: value.price,
-      id: 0
     }
-    this._ProductService.save(productData);
+    this._ProductService.save( productData).subscribe(() => {
+      //chuyen huong ve list
+      this._Router.navigate(['/products']);
+    }, (e: any) => {
+      console.log(e);
+    });
+    // this._ProductService.save(productData);
     this._Router.navigate(['/']);
   }
 }

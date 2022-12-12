@@ -12,7 +12,9 @@ export class ProductsComponent {
     private _ProductService:ProductService
   ) { }
   ngOnInit(): void {
-    this.products = this._ProductService.getAll();
+    this._ProductService.getAll().subscribe(products => {
+      this.products = products;
+    });
     console.log(this.products);
   }
 }
